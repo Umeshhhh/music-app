@@ -12,6 +12,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        "Neon" : ["Tilt Neon"],
+        "Rubik" : ["Rubik Wet Paint"]
+      }
     },
   },
   plugins: [],
