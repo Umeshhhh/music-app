@@ -2,32 +2,36 @@ import Create_Playlist_Button from '@/components/Create_Playlist_Button';
 import Create_Playlist_Comp from '@/components/Create_Playlist_Comp';
 import Playlist_list from '@/components/Playlist_list';
 import Side_List from '@/components/Side_List';
+import Songs_Window from '@/components/Songs_Window';
 
 export default function Home() {
-
   return (
     <div className="h-screen relative w-full bg-black">
       <Create_Playlist_Comp />
       <div className="h-full w-full grid grid-rows-6">
         <div className="h-full w-full row-span-5">
-          <div className="h-full max-w-full grid grid-flow-col grid-col-9">
-            <div className="col-span-1 flex flex-col bg-white font-Neon">
-              <h1 className='text-black text-3xl py-3 pl-7 font-Rubik cursor-pointer w-fit'>Musicfy</h1>
-              {/* <hr></hr> */}
+          <div className="h-full w-full grid grid-cols-12">
+            {/* Sidebar */}
+            <div className="col-span-2 max-w-60 flex flex-col bg-white font-Neon border">
+              <h1 className="text-black text-3xl py-3 pl-7 font-Rubik cursor-pointer w-fit">Musicfy</h1>
               <Side_List />
-              <section className='flex flex-col gap-3 place-items-center'>
-                <h2 className='w-full font-semibold text-black text-xl text-left pl-8'>Playlists</h2>
+              <section className="flex flex-col gap-3 place-items-center">
+                <h2 className="w-full font-semibold text-black text-xl text-left pl-8">Playlists</h2>
                 <Create_Playlist_Button />
                 <Playlist_list />
               </section>
             </div>
-            <div className="col-span-8 border bg-blue-50">
-              
+
+            {/* Main Content Area */}
+            <div className="col-span-10 bg-gray-100 overflow-y-auto">
+              <Songs_Window />
             </div>
           </div>
         </div>
-        <div className="row-span-1 z-50">
 
+        {/* Bottom Player Bar */}
+        <div className="row-span-1 z-50 bg-white flex items-center justify-center border">
+          
         </div>
       </div>
     </div>
