@@ -12,7 +12,7 @@ export default function Home() {
         <div className="h-full w-full row-span-5">
           <div className="h-full w-full grid grid-cols-12">
             {/* Sidebar */}
-            <div className="col-span-2 max-w-60 flex flex-col bg-white font-Neon border">
+            <div className="col-span-2 w-full flex flex-col bg-white font-Neon border">
               <h1 className="text-black text-3xl py-3 pl-7 font-Rubik cursor-pointer w-fit">Musicfy</h1>
               <Side_List />
               <section className="flex flex-col gap-3 place-items-center">
@@ -23,7 +23,7 @@ export default function Home() {
             </div>
 
             {/* Main Content Area */}
-            <div className="col-span-10 bg-gray-100 overflow-y-auto">
+            <div className="w-full col-span-10 bg-gray-100 overflow-y-auto">
               <Songs_Window />
             </div>
           </div>

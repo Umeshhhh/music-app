@@ -59,15 +59,15 @@ export default function Side_List(){
         <section className='w-full py-2 flex justify-center'>
             <ul className='w-full flex flex-col place-items-center gap-3 py-1'>
                 <li onClick={() => clickFunction(0)} className={`flex gap-5 place-items-center p-2 pl-3 w-4/5 rounded-xl transition-all cursor-pointer ${selected.menu.Home == true ? 'bg-gray-200 font-semibold shadow-lg' : 'hover:bg-gray-100 hover:shadow-xl'}`}>
-                    <FontAwesomeIcon className='h-5 w-5' size='1x' bounce={selected.menu.Home == true ? shake : false} color='black' icon={faHouse} />
+                    <FontAwesomeIcon className='h-5 w-5' size='1x' bounce={selected.menu.Home == true ? shake : false} color={selected.menu.Home ? 'black' : 'gray'} icon={faHouse} />
                     <p>Home</p>
                 </li>
                 <li onClick={() => clickFunction(1)} className={`flex gap-5 place-items-center p-2 pl-3 w-4/5 rounded-xl transition-all cursor-pointer ${selected.menu.Search == true ? 'bg-gray-200 font-semibold shadow-lg' : 'hover:bg-gray-100 hover:shadow-xl'}`}>
-                    <FontAwesomeIcon className='h-5 w-5' size='1x' bounce={selected.menu.Search == true ? shake : false} color='black' icon={faSearch} />
+                    <FontAwesomeIcon className='h-5 w-5' size='1x' bounce={selected.menu.Search == true ? shake : false} color={selected.menu.Search ? 'black' : 'gray'} icon={faSearch} />
                     <p>Search</p>
                 </li>
                 <li onClick={() => clickFunction(2)} className={`flex gap-5 place-items-center p-2 pl-3 w-4/5 rounded-xl transition-all cursor-pointer ${selected.menu.Library == true ? 'bg-gray-200 font-semibold shadow-lg' : 'hover:bg-gray-100 hover:shadow-xl'}`}>
-                    <FontAwesomeIcon className='h-5 w-5' size='1x' bounce={selected.menu.Library == true ? shake : false} color='black' icon={faLayerGroup} />
+                    <FontAwesomeIcon className='h-5 w-5' size='1x' bounce={selected.menu.Library == true ? shake : false} color={selected.menu.Library ? 'black' : 'gray'} icon={faLayerGroup} />
                     <p>Your Library</p>
                 </li>
             </ul>
